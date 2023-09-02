@@ -20,6 +20,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'isotnek', // Usually your GitHub org/user name.
   projectName: 'isotnek.github.io', // Usually your repo name.
+  deploymentBranch: 'production',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -78,13 +79,15 @@ const config = {
       */
       items: [
         {to: '/aboutMe', label: 'About Me', position: 'left'},
+        /*
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Projects',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},    
+        */
+        //{to: '/blog', label: 'Blog', position: 'left'},    
         {to: '/resume', label: 'Resume', position: 'left'},
         {to: '/cv', label: 'Academic CV', position: 'left'},
         // Right Side Navbar
