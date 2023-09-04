@@ -164,9 +164,20 @@ const config = {
     metadata: [
       //{name: 'description', content: 'Your site description'},
       //{name: 'theme-color', content: '#yourColor'},
-      {rel: 'preconnect', href: 'https://cdnjs.cloudflare.com'}
+      {rel: 'preconnect', href: 'https://cdnjs.cloudflare.com'}      
     ],
-  }      
+    headTags: [
+      [
+        'link',
+        {
+          rel: 'preload',
+          href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css',
+          as: 'style',
+          onload: "this.onload=null;this.rel='stylesheet'",
+        },
+      ],
+    ],
+  }
 };
 
 module.exports = config;
