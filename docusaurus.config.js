@@ -61,12 +61,10 @@ const config = {
     ],
   ],
   
-  scripts: [
-    {
-      src: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js',
-      defer: true,
-    },
+  stylesheets: [
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'
   ],
+  
 
   themeConfig: {
     navbar: {
@@ -88,8 +86,8 @@ const config = {
         },
         */
         //{to: '/blog', label: 'Blog', position: 'left'},    
-        {to: '/resume', label: 'Resume', position: 'left'},
-        {to: '/cv', label: 'Academic CV', position: 'left'},
+        {to: '/my-resume', label: 'Resume', position: 'left'},
+        {to: '/my-cv', label: 'Academic CV', position: 'left'},
         // Right Side Navbar
         {
           to: '/contactMe',
@@ -162,7 +160,12 @@ const config = {
       ],
       */
       copyright: `Copyright © ${new Date().getFullYear()} Ian Sotnek. Built with Docusaurus.`,
-    }
+    },
+    metadata: [
+      //{name: 'description', content: 'Your site description'},
+      //{name: 'theme-color', content: '#yourColor'},
+      {rel: 'preconnect', href: 'https://cdnjs.cloudflare.com'}
+    ],
   }      
 };
 
