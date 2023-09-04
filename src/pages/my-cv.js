@@ -38,7 +38,7 @@ function CV() {
               title="CV"
               style={iframeStyle}
           >
-              This browser does not support PDFs. Please <a href="/assets/IanAcademicCV-Sept2023-v2.pdf">download the PDF</a> to view it.
+              This browser does not support PDFs. Please <a href="/assets/IanAcademicCV-sept2023-v2.pdf">download the PDF</a> to view it.
           </iframe>
         </div>
       </div>
