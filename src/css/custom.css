@@ -33,18 +33,6 @@ body.static-document-page {
   background-color: var(--ifm-color-primary);
 }
 
-.fa-github-icon a::before {
-  content: '\f09b' !important; /* FontAwesome GitHub icon */
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-}
-
-.fa-linkedin-icon a::before {
-  content: '\f08c' !important; /* FontAwesome LinkedIn icon */
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-}
-
 .inline-image {
   border-radius: 0% !important; 
 }
