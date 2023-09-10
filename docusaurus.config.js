@@ -89,7 +89,7 @@ const config = {
           label: 'Projects',
         },
         */
-        //{to: '/blog', label: 'Blog', position: 'left'},    
+        {to: '/blog', label: 'Blog', position: 'left'},    
         {to: '/my-resume', label: 'Resume', position: 'left'},
         {to: '/my-cv', label: 'Academic CV', position: 'left'},
         // Right Side Navbar
