@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"What is Human-Machine Teaming?","permalink":"/blog/first-HMT-blog-post"}]}')}}]);

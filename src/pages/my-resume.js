@@ -34,11 +34,11 @@ function Resume() {
       <div className="container margin-vert--lg">
         <div style={iframeContainerStyle}>
           <iframe 
-              src="/assets/currentResume.pdf"
+              src="/assets/IanResume_Nov2023.pdf"
               title="Resume"
               style={iframeStyle}
           >
-              This browser does not support PDFs. Please <a href="/assets/currentResume.pdf">download the PDF</a> to view it.
+              This browser does not support PDFs. Please <a href="/assets/IanResume_Nov2023.pdf">download the PDF</a> to view it.
           </iframe>
         </div>
       </div>
