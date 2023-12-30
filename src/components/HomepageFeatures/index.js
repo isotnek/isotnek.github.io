@@ -8,7 +8,7 @@ const FeatureList = [
     imageSrc: require('@site/static/img/icons/science.png').default,
     description: (
       <>
-        Researching applied and foundational machine learning, and interested in applications of neuromorphic information processing for robust and performant autonomous systems.
+        Researching applied and foundational machine learning, and interested in applications of neuromorphic information processing for robust, performant, and energy-efficient autonomous systems.
       </>
     ),
     imgTitle: 'Icons created by Freepik - Flaticon',
