@@ -34,7 +34,7 @@ function CV() {
       <div className="container margin-vert--lg">
         <div style={iframeContainerStyle}>
           <iframe 
-              src="/assets/IanAcademicCV-sept2023-v2.pdf"
+              src="/assets/cv/IanAcademicCV-sept2023-v2.pdf"
               title="CV"
               style={iframeStyle}
           >

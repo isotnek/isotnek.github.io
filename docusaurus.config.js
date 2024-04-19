@@ -182,8 +182,8 @@ const config = {
       copyright: `Copyright © ${new Date().getFullYear()} Ian Sotnek. Built with Docusaurus.`,
     },
     metadata: [
-      //{name: 'description', content: 'Your site description'},
-      //{name: 'theme-color', content: '#yourColor'},
+      {name: 'description', content: 'Ian Sotnek - Technical Product Manager'},
+      {name: 'keywords', content: 'Ian Sotnek, AI Research, Product, Product Manager, Data Science'},
       {rel: 'preconnect', href: 'https://cdnjs.cloudflare.com'}      
     ],
     headTags: [
