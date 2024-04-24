@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://isotnek.github.io/blog</id>
-    <title>Ian Sotnek Blog</title>
+    <title>Ian Sotnek's Homepage Blog</title>
     <updated>2024-04-19T19:55:34.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://isotnek.github.io/blog"/>
-    <subtitle>Ian Sotnek Blog</subtitle>
+    <subtitle>Ian Sotnek's Homepage Blog</subtitle>
     <icon>https://isotnek.github.io/img/profilePhotos/selfImage.jpeg</icon>
     <entry>
         <title type="html"><![CDATA[Game of Life - NumPy & SciPy Implementation]]></title>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>Ian Sotnek Blog</title>
+        <title>Ian Sotnek's Homepage Blog</title>
         <link>https://isotnek.github.io/blog</link>
-        <description>Ian Sotnek Blog</description>
+        <description>Ian Sotnek's Homepage Blog</description>
         <lastBuildDate>Fri, 19 Apr 2024 19:55:34 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
