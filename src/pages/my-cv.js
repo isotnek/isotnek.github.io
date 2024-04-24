@@ -34,11 +34,11 @@ function CV() {
       <div className="container margin-vert--lg">
         <div style={iframeContainerStyle}>
           <iframe 
-              src="/assets/cv/IanAcademicCV-sept2023-v2.pdf"
+              src="/assets/IanCV.pdf"
               title="CV"
               style={iframeStyle}
           >
-              This browser does not support PDFs. Please <a href="/assets/IanAcademicCV-sept2023-v2.pdf">download the PDF</a> to view it.
+              This browser does not support PDFs. Please <a href="/assets/IanCV.pdf">download the PDF</a> to view it.
           </iframe>
         </div>
       </div>

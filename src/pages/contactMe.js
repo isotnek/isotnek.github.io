@@ -27,7 +27,7 @@ function ContactPage() {
       <div style={styles.container}>
         <h1>Contact Me</h1>
         <p style={styles.message}>
-          I always appreciate connecting with passionate individuals. Whether you have questions, ideas, or just want to chat, don't hesitate to reach out!
+          If you want to connect, collaborate, or just want to chat, please don't hesitate to reach out!
         </p>
         <button className="button button--primary" onClick={handleMailto}>
           Email Me

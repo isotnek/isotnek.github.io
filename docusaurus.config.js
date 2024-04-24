@@ -10,8 +10,8 @@ const path = require('path');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Ian Sotnek',
-  tagline: 'AI Squared Co-Founder & Multidisciplinary Researcher',
+  title: "Ian Sotnek's Homepage",
+  tagline: "Welcome! I'm Ian, and I'm a technical product manager and multidisciplinary researcher.",
   favicon: 'img/profilePhotos/selfImage.jpeg',
 
   // Set the production url of your site here
@@ -182,7 +182,7 @@ const config = {
       copyright: `Copyright © ${new Date().getFullYear()} Ian Sotnek. Built with Docusaurus.`,
     },
     metadata: [
-      {name: 'description', content: 'Ian Sotnek - Technical Product Manager'},
+      {name: 'description', content: 'Ian Sotnek - Technical, Product Manager'},
       {name: 'keywords', content: 'Ian Sotnek, AI Research, Product, Product Manager, Data Science'},
       {rel: 'preconnect', href: 'https://cdnjs.cloudflare.com'}      
     ],
