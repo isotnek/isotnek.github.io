@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ian Sotnek - Personal Website</title>
+    <link rel="icon" href="images/placeholder-profile.jpg" type="image/jpeg">
+    <link id="theme-style" rel="stylesheet" href="styles/retro.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <button id="theme-toggle-btn" aria-label="Toggle theme">
+            <i class="fas fa-sun" id="theme-toggle-icon"></i>
+        </button>
+    </div>
+
+    <!-- Banner Section - Visible in all themes -->
+    <div id="banner" class="section">
+        <h1 class="banner-text">Exploring the intersection of technology and creativity</h1>
+    </div>
+
+    <!-- Photo Element - Used differently across themes -->
+    <div id="photo-element" class="photo-container">
+        <img src="images/placeholder-profile.jpg" alt="Ian Sotnek" id="profile-image">
+    </div>
+
+    <!-- Content Sections - Content stays the same across themes but styling changes -->
+    <div id="main-content">
+        <!-- Two-column layout for About and Interests -->
+        <div class="content-row">
+            <!-- About Section -->
+            <div id="about-section" class="section column">
+                <h2>About Me</h2>
+                <p>Hello, I'm Ian Sotnek. I'm an academic with a passion for exploring how technology shapes our world. My research focuses on emerging technologies and their societal implications. I received my PhD from Example University and currently teach courses on digital ethics and computational thinking.</p>
+            </div>
+
+            <!-- Interests Section -->
+            <div id="interests-section" class="section column">
+                <h2>Interests & Hobbies</h2>
+                <ul>
+                    <li>Retro computing and vintage technology preservation</li>
+                    <li>Outdoor hiking and wilderness photography</li>
+                    <li>Interactive fiction and text-based gaming</li>
+                    <li>Cybersecurity research and ethical hacking</li>
+                    <li>Cold-war era history and intelligence techniques</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer with Contact Information -->
+    <footer id="footer">
+        <!-- Contact Section -->
+        <div id="contact-section" class="section">
+            <h2>Contact Me</h2>
+            <p>ian{dot}sotnek{@}gmail{dot}com</p>
+            
+            <!-- Social Media Links - Displayed differently in each theme -->
+            <div id="social-links">
+                <a href="https://github.com/" class="social-link" id="github-link" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <span class="sr-only">GitHub</span>
+                </a>
+                <a href="https://bsky.app/" class="social-link" id="bluesky-link" aria-label="Bluesky">
+                    <i class="fas fa-cloud" aria-hidden="true"></i>
+                    <span class="sr-only">Bluesky</span>
+                </a>
+                <a href="https://linkedin.com/" class="social-link" id="linkedin-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    <span class="sr-only">LinkedIn</span>
+                </a>
+                <a href="https://scholar.google.com/" class="social-link" id="scholar-link" aria-label="Google Scholar">
+                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                    <span class="sr-only">Google Scholar</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Desktop Theme Special Elements -->
+    <div id="desktop-container" class="hidden">
+        <div class="desktop-icon about-me" data-window="about">
+            <span></span>
+            <span class="icon-label">About Me</span>
+        </div>
+        <div class="desktop-icon interests" data-window="interests">
+            <span></span>
+            <span class="icon-label">Interests</span>
+        </div>
+        <div class="desktop-icon contact" data-window="contact">
+            <span></span>
+            <span class="icon-label">Contact</span>
+        </div>
+        <div class="desktop-icon github" data-window="github">
+            <span></span>
+            <span class="icon-label">GitHub</span>
+        </div>
+        <div class="desktop-icon linkedin" data-window="linkedin">
+            <span></span>
+            <span class="icon-label">LinkedIn</span>
+        </div>
+        <div class="desktop-icon bluesky" data-window="bluesky">
+            <span></span>
+            <span class="icon-label">Bluesky</span>
+        </div>
+        <div class="desktop-icon scholar" data-window="scholar">
+            <span></span>
+            <span class="icon-label">Scholar</span>
+        </div>
+    </div>
+</body>
+</html>

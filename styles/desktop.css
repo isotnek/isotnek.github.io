@@ -1,0 +1,240 @@
+/* Old-school Desktop Theme */
+body.theme-desktop {
+    background-color: #008080;
+    background-image: url('../images/desktop-bg.png');
+    font-family: 'Tahoma', 'Arial', sans-serif;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.desktop-icon.about-me span:first-child {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url('../images/website_desktop_icons/about-me.png') no-repeat center center;
+    background-size: contain;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.desktop-icon.contact span:first-child {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url('../images/website_desktop_icons/contact.png') no-repeat center center;
+    background-size: contain;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.desktop-icon.interests span:first-child {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url('../images/website_desktop_icons/interests.png') no-repeat center center;
+    background-size: contain;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.desktop-icon.linkedin span:first-child {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url('../images/website_desktop_icons/linkedin.png') no-repeat center center;
+    background-size: contain;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.desktop-icon.github span:first-child {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url('../images/website_desktop_icons/github.png') no-repeat center center;
+    background-size: contain;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.desktop-icon.bluesky span:first-child {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url('../images/website_desktop_icons/bluesky.png') no-repeat center center;
+    background-size: contain;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.desktop-icon.scholar span:first-child {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url('../images/website_desktop_icons/google-scholar.png') no-repeat center center;
+    background-size: contain;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.theme-desktop #banner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #c0c0c0;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #808080;
+    padding: 5px 10px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.theme-desktop .banner-text {
+    font-size: 14px;
+    margin: 0;
+    font-weight: normal;
+}
+
+.theme-desktop #desktop-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 80px);
+    gap: 20px;
+    padding: 20px;
+}
+
+.theme-desktop .desktop-icon {
+    width: 80px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+}
+
+.theme-desktop .desktop-icon img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 5px;
+}
+
+.theme-desktop .desktop-icon span.icon-label {
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    text-shadow: 1px 1px 1px #000;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Remove generic text styling for icon spans as they now use background images */
+/*
+.theme-desktop .desktop-icon span {
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    text-shadow: 1px 1px 1px #000;
+}
+*/
+
+.theme-desktop .desktop-window {
+    position: absolute;
+    width: 320px;
+    height: 240px;
+    background-color: #c0c0c0;
+    border: 2px outset #ddd;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.theme-desktop .window-title-bar {
+    background: linear-gradient(to right, #000080, #1084d0);
+    color: white;
+    padding: 3px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+}
+
+.theme-desktop .window-title {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.theme-desktop .window-close {
+    background-color: #c0c0c0;
+    border: 1px outset #ddd;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.theme-desktop .window-content {
+    padding: 10px;
+    overflow: auto;
+    flex-grow: 1;
+    font-size: 12px;
+}
+
+.theme-desktop .window-content h2 {
+    margin-top: 0;
+    font-size: 14px;
+    color: #000080;
+}
+
+.theme-desktop .window-content p,
+.theme-desktop .window-content ul,
+.theme-desktop .window-content li {
+    margin-bottom: 5px;
+}
+
+.theme-desktop .window-content ul {
+    padding-left: 20px;
+}
+
+.theme-desktop #social-links {
+    display: none;
+}
+
+/* Fix for profile image overflow */
+.theme-desktop #photo-element {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    z-index: 99;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px inset #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.theme-desktop #profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Position the contact icon at the bottom to represent footer */
+.theme-desktop .desktop-icon[data-window="contact"] {
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+}
+
+/* For desktop view, the footer is hidden as contact is accessed via icon */
+.theme-desktop #footer {
+    display: none;
+}

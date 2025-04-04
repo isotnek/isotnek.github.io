@@ -1,0 +1,112 @@
+/* Oregon Trail Theme */
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+}
+
+body.theme-trail {
+    background-image: url('../images/trail-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    line-height: 1.5;
+    padding: 20px;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.theme-trail #banner {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 3px solid #fff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.theme-trail .section {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 4px double #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.theme-trail h1, .theme-trail h2 {
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.theme-trail ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.theme-trail li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.theme-trail li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: #fff;
+}
+
+.theme-trail #photo-element {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+    image-rendering: pixelated;
+}
+
+.theme-trail #profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: pixelated;
+    border: 3px solid #fff;
+}
+
+.theme-trail #social-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.theme-trail .social-link {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.theme-trail .social-link i {
+    display: inline-block;
+}
+
+.theme-trail .social-link::before {
+    content: '> ';
+    font-family: monospace;
+}
+
+.theme-trail .social-link:hover {
+    color: #7fff00;
+}
+
+@media (max-width: 768px) {
+    .theme-trail #photo-element {
+        position: static;
+        margin: 0 auto 20px;
+    }
+}
