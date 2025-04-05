@@ -6,6 +6,82 @@
     z-index: 1000;
 }
 
+/* Tooltip styling */
+.tooltip {
+    position: absolute;
+    background-color: #fff;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    top: 50px;
+    right: 0;
+    font-size: 14px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1001;
+}
+
+.tooltip.visible {
+    opacity: 1;
+}
+
+.tooltip p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.tooltip-arrow {
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+}
+
+/* Theme-specific tooltip styles */
+body.theme-retro .tooltip {
+    background-color: #f5f7fa;
+    border: 1px solid #e1e8ed;
+    color: #2c3e50;
+}
+
+body.theme-retro .tooltip-arrow {
+    border-bottom-color: #f5f7fa;
+}
+
+body.theme-trail .tooltip {
+    background: linear-gradient(to bottom, rgba(240, 211, 155, 0.95), rgba(205, 152, 83, 0.95));
+    color: #3a2c1d;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.theme-trail .tooltip-arrow {
+    border-bottom-color: rgba(240, 211, 155, 0.95);
+}
+
+body.theme-desktop .tooltip {
+    background-color: #c0c0c0;
+    border: 2px outset white;
+    color: #000;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 2px 2px 0 #888;
+    padding: 8px;
+}
+
+body.theme-desktop .tooltip-arrow {
+    border-bottom-color: #c0c0c0;
+}
+
 #theme-toggle-btn {
     background: none;
     border: none;

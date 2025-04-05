@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ian Sotnek - Personal Website</title>
-    <link rel="icon" href="images/placeholder-profile.jpg" type="image/jpeg">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link id="theme-style" rel="stylesheet" href="styles/retro.css">
     <link rel="stylesheet" href="styles/base.css">
     <!-- Font Awesome for social icons -->
@@ -17,11 +17,15 @@
         <button id="theme-toggle-btn" aria-label="Toggle theme">
             <i class="fas fa-sun" id="theme-toggle-icon"></i>
         </button>
+        <div id="theme-tooltip" class="tooltip hidden">
+            <p>Psst! Try clicking this button to see different themes!</p>
+            <div class="tooltip-arrow"></div>
+        </div>
     </div>
 
     <!-- Banner Section - Visible in all themes -->
     <div id="banner" class="section">
-        <h1 class="banner-text">Exploring the intersection of technology and creativity</h1>
+        <h1 class="banner-text">Researcher & Engineer</h1>
     </div>
 
     <!-- Photo Element - Used differently across themes -->
@@ -36,18 +40,20 @@
             <!-- About Section -->
             <div id="about-section" class="section column">
                 <h2>About Me</h2>
-                <p>Hello, I'm Ian Sotnek. I'm an academic with a passion for exploring how technology shapes our world. My research focuses on emerging technologies and their societal implications. I received my PhD from Example University and currently teach courses on digital ethics and computational thinking.</p>
+                <p>Hello, I'm Ian Sotnek. I'm a biomechanist / neuroscientist, turned startup founder & product manager, turned AI engineer and researcher. This career arc has made me a very good technical & non-technical communicator, a rigorous experimenter, and someone who is driven to get things done.
+
+                    Currently I split time between Tribe AI, where I served as tech lead and AI engineering contractor; and AI Squared, a startup I co-founded, where I now deliver AI/ML and data science and engineering solutions to customers in the U.S. Federal government.</p>
             </div>
 
             <!-- Interests Section -->
             <div id="interests-section" class="section column">
                 <h2>Interests & Hobbies</h2>
                 <ul>
-                    <li>Retro computing and vintage technology preservation</li>
-                    <li>Outdoor hiking and wilderness photography</li>
-                    <li>Interactive fiction and text-based gaming</li>
-                    <li>Cybersecurity research and ethical hacking</li>
-                    <li>Cold-war era history and intelligence techniques</li>
+                    <li>Scale & rotation-invariant learning</li>
+                    <li>MLops & AI engineering</li>
+                    <li>Human-machine teaming</li>
+                    <li>Hiking, backpacking, and rock climbing</li>
+                    <li>Retro gaming</li>
                 </ul>
             </div>
         </div>
@@ -62,19 +68,19 @@
             
             <!-- Social Media Links - Displayed differently in each theme -->
             <div id="social-links">
-                <a href="https://github.com/" class="social-link" id="github-link" aria-label="GitHub">
+                <a href="https://github.com/isotnek" class="social-link" id="github-link" aria-label="GitHub">
                     <i class="fab fa-github" aria-hidden="true"></i>
                     <span class="sr-only">GitHub</span>
                 </a>
-                <a href="https://bsky.app/" class="social-link" id="bluesky-link" aria-label="Bluesky">
+                <a href="https://bsky.app/profile/isotnek.bsky.social" class="social-link" id="bluesky-link" aria-label="Bluesky">
                     <i class="fas fa-cloud" aria-hidden="true"></i>
                     <span class="sr-only">Bluesky</span>
                 </a>
-                <a href="https://linkedin.com/" class="social-link" id="linkedin-link" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/ian-sotnek/" class="social-link" id="linkedin-link" aria-label="LinkedIn">
                     <i class="fab fa-linkedin" aria-hidden="true"></i>
                     <span class="sr-only">LinkedIn</span>
                 </a>
-                <a href="https://scholar.google.com/" class="social-link" id="scholar-link" aria-label="Google Scholar">
+                <a href="https://scholar.google.com/citations?user=d2Guct8AAAAJ&hl=en" class="social-link" id="scholar-link" aria-label="Google Scholar">
                     <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                     <span class="sr-only">Google Scholar</span>
                 </a>

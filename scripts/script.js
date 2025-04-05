@@ -6,13 +6,40 @@ document.addEventListener('DOMContentLoaded', function() {
     const desktopContainer = document.getElementById('desktop-container');
     const mainContent = document.getElementById('main-content');
     const footer = document.getElementById('footer');
+    const themeTooltip = document.getElementById('theme-tooltip');
     
     // Available themes array
-    const themes = ['retro', 'trail', 'desktop', 'cyberpunk', 'dossier'];
+    const themes = ['retro', 'desktop','trail'];
     let currentThemeIndex = 0; // Start with the first theme (retro)
+    let tooltipShown = false;
     
     // Initialize with default theme (retro)
     setTheme(themes[currentThemeIndex]);
+    
+    // Show tooltip after 5 seconds (change this value as needed)
+    setTimeout(function() {
+        if (!tooltipShown) {
+            themeTooltip.classList.remove('hidden');
+            themeTooltip.classList.add('visible');
+            tooltipShown = true;
+            
+            // Hide tooltip after 10 seconds if not clicked (change this value as needed)
+            setTimeout(function() {
+                if (tooltipShown) {
+                    hideTooltip();
+                }
+            }, 10000);
+        }
+    }, 5000);
+    
+    // Hide tooltip function
+    function hideTooltip() {
+        themeTooltip.classList.remove('visible');
+        setTimeout(() => {
+            themeTooltip.classList.add('hidden');
+        }, 300);
+        tooltipShown = false;
+    }
     
     // Theme change handler for toggle button
     themeToggleBtn.addEventListener('click', function() {
@@ -25,6 +52,11 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             themeToggleIcon.style.transform = 'rotate(0)';
         }, 500);
+        
+        // Hide tooltip when button is clicked
+        if (tooltipShown) {
+            hideTooltip();
+        }
     });
     
     function setTheme(theme) {
@@ -62,12 +94,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             case 'trail':
                 themeToggleIcon.className = 'fas fa-tree';
-                break;
-            case 'cyberpunk':
-                themeToggleIcon.className = 'fas fa-bolt';
-                break;
-            case 'dossier':
-                themeToggleIcon.className = 'fas fa-file-alt';
                 break;
             default:
                 themeToggleIcon.className = 'fas fa-sun';
@@ -139,23 +165,42 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             case 'contact':
                 title.textContent = 'Contact Me';
-                content.innerHTML = document.getElementById('contact-section').innerHTML;
+                
+                // Get the contact section content
+                const contactElement = document.getElementById('contact-section');
+                
+                // Create a temporary div to hold the content
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = contactElement.innerHTML;
+                
+                // Create and insert welcome message at the beginning
+                const welcomeP = document.createElement('p');
+                welcomeP.innerHTML = 'I welcome connections and collaborations!';
+                welcomeP.style.fontStyle = 'italic';
+                welcomeP.style.marginBottom = '10px';
+                
+                // Insert the welcome paragraph at the beginning of the content
+                tempDiv.insertBefore(welcomeP, tempDiv.firstChild);
+                
+                // Set the content
+                content.innerHTML = tempDiv.innerHTML;
                 break;
             case 'github':
                 title.textContent = 'GitHub';
-                content.innerHTML = '<p>Visit my GitHub profile at <a href="https://github.com/"><i class="fab fa-github"></i> github.com/iansotnek</a></p>';
+                content.textContent = 'Visit my GitHub profile at github.com/isotnek';
+                content.innerHTML = '<p>Visit my GitHub profile at <a href="https://github.com/isotnek"><i class="fab fa-github"></i> github.com/isotnek</a></p>';
                 break;
             case 'bluesky':
                 title.textContent = 'Bluesky';
-                content.innerHTML = '<p>Follow me on Bluesky at <a href="https://bsky.app/"><i class="fas fa-cloud"></i> @iansotnek.bsky.social</a></p>';
+                content.innerHTML = '<p>Follow me on Bluesky at <a href="https://bsky.app/profile/isotnek.bsky.social"><i class="fas fa-cloud"></i> @iansotnek.bsky.social</a></p>';
                 break;
             case 'linkedin':
                 title.textContent = 'LinkedIn';
-                content.innerHTML = '<p>Connect with me on LinkedIn at <a href="https://linkedin.com/"><i class="fab fa-linkedin"></i> linkedin.com/in/iansotnek</a></p>';
+                content.innerHTML = '<p>Connect with me on LinkedIn at <a href="https://www.linkedin.com/in/ian-sotnek/"><i class="fab fa-linkedin"></i> linkedin.com/in/iansotnek</a></p>';
                 break;
             case 'scholar':
                 title.textContent = 'Google Scholar';
-                content.innerHTML = '<p>View my academic publications on <a href="https://scholar.google.com/"><i class="fas fa-graduation-cap"></i> Google Scholar</a></p>';
+                content.innerHTML = '<p>View my academic publications on <a href="https://scholar.google.com/citations?user=d2Guct8AAAAJ&hl=en"><i class="fas fa-graduation-cap"></i> Google Scholar</a></p>';
                 break;
         }
         
