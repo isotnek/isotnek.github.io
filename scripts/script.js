@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const mainContent = document.getElementById('main-content');
     const footer = document.getElementById('footer');
     const themeTooltip = document.getElementById('theme-tooltip');
+    const ASSET_VERSION = '20251227';
 
     // Desktop theme: icons that should open external links (instead of pop-out windows)
     const desktopExternalLinks = {
@@ -80,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function setTheme(theme) {
         // Set the appropriate stylesheet
-        themeStyle.href = `styles/${theme}.css`;
+        themeStyle.href = `styles/${theme}.css?v=${ASSET_VERSION}`;
         
         // Handle special case for desktop theme
         if (theme === 'desktop') {
