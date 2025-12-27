@@ -221,6 +221,12 @@ body {
     display: block;
 }
 
+/* Emoji-based icons (e.g., Hugging Face 🤗) */
+.social-link .emoji-icon {
+    display: block;
+    line-height: 1;
+}
+
 /* Adjusted overall layout for better spacing */
 #banner {
     padding: 20px 0;

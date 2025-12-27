@@ -7,33 +7,52 @@ document.addEventListener('DOMContentLoaded', function() {
     const mainContent = document.getElementById('main-content');
     const footer = document.getElementById('footer');
     const themeTooltip = document.getElementById('theme-tooltip');
+
+    // Desktop theme: icons that should open external links (instead of pop-out windows)
+    const desktopExternalLinks = {
+        github: 'https://github.com/isotnek',
+        huggingface: 'https://huggingface.co/isotnek',
+        linkedin: 'https://www.linkedin.com/in/ian-sotnek/',
+        bluesky: 'https://bsky.app/profile/isotnek.bsky.social',
+        scholar: 'https://scholar.google.com/citations?user=d2Guct8AAAAJ&hl=en'
+    };
     
     // Available themes array
-    const themes = ['retro', 'desktop','trail'];
-    let currentThemeIndex = 0; // Start with the first theme (retro)
+    const themes = ['desktop', 'retro', 'trail'];
+    let currentThemeIndex = 0; // Start with the first theme (desktop)
     let tooltipShown = false;
+    let didAutoOpenDefaultWindow = false;
     
-    // Initialize with default theme (retro)
+    // Initialize with default theme (desktop)
     setTheme(themes[currentThemeIndex]);
+
+    // Open the About Me window automatically on first load (desktop theme only)
+    if (themes[currentThemeIndex] === 'desktop' && !didAutoOpenDefaultWindow) {
+        didAutoOpenDefaultWindow = true;
+        openDesktopWindow('about');
+    }
     
     // Show tooltip after 5 seconds (change this value as needed)
-    setTimeout(function() {
-        if (!tooltipShown) {
-            themeTooltip.classList.remove('hidden');
-            themeTooltip.classList.add('visible');
-            tooltipShown = true;
-            
-            // Hide tooltip after 10 seconds if not clicked (change this value as needed)
-            setTimeout(function() {
-                if (tooltipShown) {
-                    hideTooltip();
-                }
-            }, 10000);
-        }
-    }, 5000);
+    if (themeTooltip) {
+        setTimeout(function() {
+            if (!tooltipShown) {
+                themeTooltip.classList.remove('hidden');
+                themeTooltip.classList.add('visible');
+                tooltipShown = true;
+                
+                // Hide tooltip after 10 seconds if not clicked (change this value as needed)
+                setTimeout(function() {
+                    if (tooltipShown) {
+                        hideTooltip();
+                    }
+                }, 10000);
+            }
+        }, 5000);
+    }
     
     // Hide tooltip function
     function hideTooltip() {
+        if (!themeTooltip) return;
         themeTooltip.classList.remove('visible');
         setTimeout(() => {
             themeTooltip.classList.add('hidden');
@@ -73,6 +92,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Change the icon to a computer for desktop theme
             themeToggleIcon.className = 'fas fa-desktop';
         } else {
+            // Leaving desktop theme: remove any open desktop windows so they don't "leak"
+            // into other themes as unstyled pop-outs.
+            document.querySelectorAll('.desktop-window').forEach(win => win.remove());
+
             desktopContainer.classList.add('hidden');
             mainContent.classList.remove('hidden');
             footer.classList.remove('hidden');
@@ -112,10 +135,31 @@ document.addEventListener('DOMContentLoaded', function() {
             // Remove previous event listeners to prevent duplicates
             const clonedIcon = icon.cloneNode(true);
             icon.parentNode.replaceChild(clonedIcon, icon);
-            
-            clonedIcon.addEventListener('click', function() {
-                const windowType = this.getAttribute('data-window');
+
+            const windowType = clonedIcon.getAttribute('data-window');
+            const labelEl = clonedIcon.querySelector('.icon-label');
+            const label = (labelEl && labelEl.textContent) ? labelEl.textContent.trim() : (windowType || 'Desktop icon');
+
+            // Basic accessibility for div-as-button icons
+            clonedIcon.setAttribute('tabindex', '0');
+            clonedIcon.setAttribute('role', 'button');
+            clonedIcon.setAttribute('aria-label', label);
+
+            const activate = () => {
+                const url = desktopExternalLinks[windowType];
+                if (url) {
+                    window.open(url, '_blank', 'noopener,noreferrer');
+                    return;
+                }
                 openDesktopWindow(windowType);
+            };
+
+            clonedIcon.addEventListener('click', activate);
+            clonedIcon.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    activate();
+                }
             });
         });
     }
@@ -201,6 +245,10 @@ document.addEventListener('DOMContentLoaded', function() {
             case 'scholar':
                 title.textContent = 'Google Scholar';
                 content.innerHTML = '<p>View my academic publications on <a href="https://scholar.google.com/citations?user=d2Guct8AAAAJ&hl=en"><i class="fas fa-graduation-cap"></i> Google Scholar</a></p>';
+                break;
+            case 'huggingface':
+                title.textContent = 'Hugging Face';
+                content.innerHTML = '<p>Find my Hugging Face profile at <a href="https://huggingface.co/isotnek">🤗 huggingface.co/isotnek</a></p>';
                 break;
         }
         

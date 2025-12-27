@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ian Sotnek - Personal Website</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-    <link id="theme-style" rel="stylesheet" href="styles/retro.css">
+    <link id="theme-style" rel="stylesheet" href="styles/desktop.css">
     <link rel="stylesheet" href="styles/base.css">
     <!-- Font Awesome for social icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="scripts/script.js" defer></script>
 </head>
-<body>
+<body class="theme-desktop">
     <!-- Theme Toggle Button -->
     <div class="theme-toggle">
         <button id="theme-toggle-btn" aria-label="Toggle theme">
             <i class="fas fa-sun" id="theme-toggle-icon"></i>
         </button>
-        <div id="theme-tooltip" class="tooltip hidden">
+        <!-- <div id="theme-tooltip" class="tooltip hidden">
             <p>Psst! Try clicking this button to see different themes!</p>
             <div class="tooltip-arrow"></div>
-        </div>
+        </div> -->
     </div>
 
     <!-- Banner Section - Visible in all themes -->
     <div id="banner" class="section">
-        <h1 class="banner-text">Researcher & Engineer</h1>
+        <h1 class="banner-text">Ian Sotnek - Data Scientist & Engineer</h1>
     </div>
 
     <!-- Photo Element - Used differently across themes -->
@@ -34,33 +34,33 @@
     </div>
 
     <!-- Content Sections - Content stays the same across themes but styling changes -->
-    <div id="main-content">
+    <div id="main-content" class="hidden">
         <!-- Two-column layout for About and Interests -->
         <div class="content-row">
             <!-- About Section -->
             <div id="about-section" class="section column">
                 <h2>About Me</h2>
-                <p>Hello, I'm Ian Sotnek. I'm a biomechanist / neuroscientist, turned startup founder & product manager, turned AI engineer and researcher. This career arc has made me a very good technical & non-technical communicator, a rigorous experimenter, and someone who is driven to get things done.
-
-                    Currently I split time between Tribe AI, where I served as tech lead and AI engineering contractor; and AI Squared, a startup I co-founded, where I now deliver AI/ML and data science and engineering solutions to customers in the U.S. Federal government.</p>
+                <p>Hello, and welcome to my site! I'm a biomechanist / neuroscientist, turned startup founder & product manager, turned AI engineer and researcher.</p>
+                <p>At AI Squared, I focus on R&D for ML / AI product features and LLM / VLM post-training.</p>
+                <p>After work, while I'm still at my computer, I'm self-studying complexity science, network science, ecology & sustainability, and the intersection of these fields.</p>
             </div>
 
             <!-- Interests Section -->
             <div id="interests-section" class="section column">
                 <h2>Interests & Hobbies</h2>
                 <ul>
-                    <li>Scale & rotation-invariant learning</li>
+                    <li>Complexity & network science</li>
                     <li>MLops & AI engineering</li>
-                    <li>Human-machine teaming</li>
+                    <li>Ecology & environmental science</li>
                     <li>Hiking, backpacking, and rock climbing</li>
-                    <li>Retro gaming</li>
+                    <li>Pining for the good old days of the internet</li>
                 </ul>
             </div>
         </div>
     </div>
 
     <!-- Footer with Contact Information -->
-    <footer id="footer">
+    <footer id="footer" class="hidden">
         <!-- Contact Section -->
         <div id="contact-section" class="section">
             <h2>Contact Me</h2>
@@ -71,6 +71,10 @@
                 <a href="https://github.com/isotnek" class="social-link" id="github-link" aria-label="GitHub">
                     <i class="fab fa-github" aria-hidden="true"></i>
                     <span class="sr-only">GitHub</span>
+                </a>
+                <a href="https://huggingface.co/isotnek" class="social-link" id="huggingface-link" aria-label="Hugging Face">
+                    <span class="emoji-icon" aria-hidden="true">🤗</span>
+                    <span class="sr-only">Hugging Face</span>
                 </a>
                 <a href="https://bsky.app/profile/isotnek.bsky.social" class="social-link" id="bluesky-link" aria-label="Bluesky">
                     <i class="fas fa-cloud" aria-hidden="true"></i>
@@ -89,7 +93,7 @@
     </footer>
 
     <!-- Desktop Theme Special Elements -->
-    <div id="desktop-container" class="hidden">
+    <div id="desktop-container">
         <div class="desktop-icon about-me" data-window="about">
             <span></span>
             <span class="icon-label">About Me</span>
@@ -105,6 +109,10 @@
         <div class="desktop-icon github" data-window="github">
             <span></span>
             <span class="icon-label">GitHub</span>
+        </div>
+        <div class="desktop-icon huggingface" data-window="huggingface">
+            <span></span>
+            <span class="icon-label">Hugging Face</span>
         </div>
         <div class="desktop-icon linkedin" data-window="linkedin">
             <span></span>

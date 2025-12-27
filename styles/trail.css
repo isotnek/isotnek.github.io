@@ -163,6 +163,12 @@ body.theme-trail {
     display: inline-block;
 }
 
+/* Emoji icons should behave like the inline FA icons in trail */
+.theme-trail .social-link .emoji-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .theme-trail .social-link::before {
     content: '> ';
     font-family: monospace;
@@ -204,8 +210,8 @@ body.theme-trail {
     position: absolute;
     bottom: 30px;
     right: 30px;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     image-rendering: pixelated;
 }
 

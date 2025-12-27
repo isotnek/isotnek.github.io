@@ -197,10 +197,10 @@ body.theme-retro {
 
 .theme-retro #photo-element {
     display: block !important;
-    width: 180px !important;
-    height: 180px !important;
+    width: 360px !important;
+    height: 360px !important;
     margin: 15px auto !important;
-    border-radius: 50% !important;
+    border-radius: 0 !important;
     overflow: hidden !important;
     border: 3px solid var(--neutral-light) !important;
     box-shadow: 0 4px 12px rgba(44, 62, 80, 0.15) !important;
@@ -244,8 +244,8 @@ body.theme-retro {
     }
     
     .theme-retro #photo-element {
-        width: 100px !important;
-        height: 100px !important;
+        width: 200px !important;
+        height: 200px !important;
     }
     
     .theme-retro .banner-text {

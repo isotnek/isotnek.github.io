@@ -13,10 +13,11 @@ body.theme-desktop {
     display: block;
     width: 48px;
     height: 48px;
-    background: url('../images/website_desktop_icons/about-me.png') no-repeat center center;
+    background: url('../images/website_desktop_icons/about-me-document.svg') no-repeat center center;
     background-size: contain;
     text-indent: -9999px;
     overflow: hidden;
+    image-rendering: pixelated;
 }
 
 .desktop-icon.contact span:first-child {
@@ -59,6 +60,17 @@ body.theme-desktop {
     overflow: hidden;
 }
 
+.desktop-icon.huggingface span:first-child {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url('../images/website_desktop_icons/huggingface.svg') no-repeat center center;
+    background-size: contain;
+    text-indent: -9999px;
+    overflow: hidden;
+    image-rendering: pixelated;
+}
+
 .desktop-icon.bluesky span:first-child {
     display: block;
     width: 48px;
@@ -73,10 +85,11 @@ body.theme-desktop {
     display: block;
     width: 48px;
     height: 48px;
-    background: url('../images/website_desktop_icons/google-scholar.png') no-repeat center center;
+    background: url('../images/website_desktop_icons/google-scholar.svg') no-repeat center center;
     background-size: contain;
     text-indent: -9999px;
     overflow: hidden;
+    image-rendering: pixelated;
 }
 
 .theme-desktop #banner {
@@ -212,8 +225,8 @@ body.theme-desktop {
     position: fixed;
     bottom: 50px;
     right: 20px;
-    width: 80px;
-    height: 80px;
+    width: 160px;
+    height: 160px;
     z-index: 99;
     border-radius: 5px;
     overflow: hidden;
